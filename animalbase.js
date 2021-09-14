@@ -15,7 +15,7 @@ const Animal = {
 };
 
 const settings = {
-  filter: "all",
+  filter: "*",
   sortBy: "name",
   sortDir: "asc",
 };
@@ -121,7 +121,7 @@ function buildList() {
 // prepare filtered list of animals for displaying
 function prepareFilteredList(animalsList) {
   let filteredList = animalsList;
-  if (settings.filter !== "all") {
+  if (settings.filter !== "*") {
     filteredList = allAnimals.filter(
       (animal) => animal.type === settings.filter
     );
